@@ -1,0 +1,18 @@
+$quote "
+$
+$set 1
+1    "Invalid key type"
+2    "Failed to open file for dictionary"
+3    "Using a key of different size"
+4    "Record exceeds maximum allowed length"
+5    "Error reading control record"
+6    "Indexed file has wrong key structure"
+7    "Key not found in file"
+8    "Attempt to write a record which has been deleted"
+ ...
+$ *****************************************************************
+$ Copyright (c) 1981,1995 Micro Focus Ltd
+$
+$ Last modified on 95/08/01
+$
+$ ****************************************************************
