@@ -22,6 +22,15 @@
 #The echo commands are used to print status messages to the console for debugging purposes, 
 #but they could be removed in a production version of the script.
 
+#***************************************************************************************************************************************************
+#Delete the op File:
+#***************************************************************************************************************************************************
+if [ -f "/Users/krishnaveni/Desktop/output.txt" ]; then
+	echo "output_file exists deleting"
+   rm "/Users/krishnaveni/Desktop/output.txt"
+else
+	"No outputfile"
+fi
 
 #***************************************************************************************************************************************************
 #Starting:
@@ -39,10 +48,11 @@ output_file='/Users/krishnaveni/Desktop/output.txt'
 #***************************************************************************************************************************************************
 #Reading through the file:
 #***************************************************************************************************************************************************
+echo $(date +"%Y-%m-%d_%H-%M-%S") >> $output_file
 # Open the input file and read its contents line by line
 while read line; do
   # Append "hello" to the current line and save it to the output file
-  echo -n "${line} hello" >> $output_file
+  echo  "${line} hello" >> $output_file
 done < $input_file
 
 if [ $? -eq 0 ]; then
